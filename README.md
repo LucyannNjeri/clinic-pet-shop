@@ -3,8 +3,7 @@
 A modern pet care web application that connects pet owners to veterinary services, grooming, training, and pet wellness resources — all in one place.
 
 🚀 Live Demo
-
-👉 View Live Project
+https://lucyannnjeri.github.io/clinic-pet-shop/
 
 📌 About the Project:
 
@@ -25,7 +24,9 @@ This project was built to strengthen my skills in:
 - 💬 Testimonials section
 - 📱 Fully responsive design (mobile + desktop)
 - 🎨 Smooth UI interactions and hover effects
+
 🛠️ Built With:
+
 - HTML5
 - CSS3 (Flexbox + Grid)
 - JavaScript
@@ -33,6 +34,7 @@ This project was built to strengthen my skills in:
 - Font Awesome Icons
 
 While building this project, I improved my understanding of:
+
 - Structuring large frontend layouts
 - Creating reusable UI components
 - Handling animations without hurting performance
@@ -41,6 +43,7 @@ While building this project, I improved my understanding of:
 - Performance Improvements (v2)
 
 This project was later optimized to improve performance:
+
 - Reduced heavy animations
 - Fixed CSS structure issues (removed invalid nesting)
 - Added lazy loading for images
@@ -48,10 +51,12 @@ This project was later optimized to improve performance:
 - Improved page load speed
 
 👩🏽‍💻 Author
+
 Lucy Ann Njeri
 Frontend Developer
 UI/UX Designer
 Graphic Designer
 
 📄 License
+
 This project is for educational and portfolio purposes.
