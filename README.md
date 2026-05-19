@@ -1,6 +1,6 @@
 🐾 Happy Paws — Pet Care & Wellness Platform
 
-A modern pet care web application that connects pet owners to veterinary services, grooming, training, and pet wellness resources — all in one place.
+A modern pet care web application that connects pet owners to veterinary services, grooming, training, and pet wellness resources.
 
 🚀 Live Demo
 https://lucyannnjeri.github.io/clinic-pet-shop/
@@ -16,6 +16,7 @@ This project was built to strengthen my skills in:
 - Advanced CSS styling & responsive design
 - JavaScript DOM manipulation
 - UI animations and user experience design
+
 ✨ Features:
 - 🏥 Pet wellness service listings (vet care, grooming, training)
 - 📊 Animated statistics counter
@@ -51,11 +52,10 @@ This project was later optimized to improve performance:
 - Improved page load speed
 
 👩🏽‍💻 Author
-
-Lucy Ann Njeri
-Frontend Developer
-UI/UX Designer
-Graphic Designer
+- Lucy Ann Njeri
+- Frontend Developer
+- UI/UX Designer
+- Graphic Designer
 
 📄 License
 
