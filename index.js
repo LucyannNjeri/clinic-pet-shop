@@ -1,29 +1,36 @@
 function playVideo(){
   const video = document.getElementById("myVideo");
-  if(!video) return;
 
-  video.paused ? video.play() : video.pause();
+  if(video.paused){
+    video.play();
+  }else{
+    video.pause();
+  }
 }
 
-// COUNTER FIX (smooth + stable)
+AOS.init({
+  once:true,
+  duration:700
+});
+
+// COUNTERS
 const counters = document.querySelectorAll(".counter");
 
 counters.forEach(counter => {
   const target = +counter.dataset.target;
   let count = 0;
 
-  const step = Math.ceil(target / 120);
-
-  function update(){
-    count += step;
+  const updateCounter = () => {
+    const increment = target / 100;
 
     if(count < target){
-      counter.textContent = count;
-      requestAnimationFrame(update);
-    } else {
-      counter.textContent = target;
+      count += increment;
+      counter.innerText = Math.ceil(count);
+      requestAnimationFrame(updateCounter);
+    }else{
+      counter.innerText = target;
     }
-  }
+  };
 
-  update();
+  updateCounter();
 });
