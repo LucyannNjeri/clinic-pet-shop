@@ -1,34 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Happy Paws</title>
 
-  <link rel="stylesheet" href="style.css" />
-
-  <!-- AOS -->
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-
-  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header>
   <div class="logo-container">
-    <img src="img/logo.jpg" alt="logo" loading="lazy">
+    <img src="img/99b6f970-1a9c-4590-94e4-f623a080978c - Copy.jpg" class="logo">
     <span class="brand-name">Furry Care</span>
   </div>
 
   <nav>
     <ul class="nav-links">
-      <li><a href="#hero">Home</a></li>
-      <li><a href="#services">Services</a></li>
+      <li><a href="#hero" id="active">Home</a></li>
+      <li><a href="#Services">Services</a></li>
       <li><a href="#doctor">Vets</a></li>
       <li><a href="#footer">About</a></li>
+      <li><a href="#shop">Shop</a></li>
     </ul>
   </nav>
 
@@ -40,28 +38,33 @@
 
 <!-- HERO -->
 <section class="health-section" id="hero">
+
   <div class="content">
     <h1>The Pet Wellness Hub</h1>
     <h2>Pawsitive Care</h2>
 
-    <p>We provide the best care for your pets.</p>
+    <p>
+      We understand that your pets deserve the best care possible and we’re here to provide it.
+      From grooming to check-ups, we ensure happiness and health.
+    </p>
 
-    <input type="email" placeholder="Enter your email" />
-
+    <input type="email" placeholder="Enter your email">
     <button class="sign-up">Sign Up</button>
     <button class="play-video" onclick="playVideo()">Play Video</button>
   </div>
 
   <div class="video-container">
-    <video id="myVideo" preload="none">
-      <source src="img/video.mp4" type="video/mp4">
+    <video id="myVideo">
+      <source src="img/istockphoto-1433626329-640_adpp_is.mp4" type="video/mp4">
     </video>
   </div>
+
 </section>
 
 <!-- STATS -->
 <section class="statistics">
-  <div class="banner">
+  <div class="banner container" data-aos="fade-up">
+
     <div class="column">
       <h3 class="counter" data-target="10000">0</h3>
       <p>Pets Treated</p>
@@ -69,51 +72,165 @@
 
     <div class="column">
       <h3 class="counter" data-target="300">0</h3>
-      <p>Products</p>
+      <p>Products Available</p>
     </div>
 
     <div class="column">
       <h3 class="counter" data-target="95">0</h3>
-      <p>Satisfaction</p>
+      <p>Customer Satisfaction</p>
     </div>
 
     <div class="column">
       <h3 class="counter" data-target="1000">0</h3>
-      <p>Emergencies</p>
+      <p>Emergencies Handled</p>
     </div>
+
   </div>
 </section>
 
 <!-- SERVICES -->
-<section id="services" class="services">
-  <h1>Our Services</h1>
+<section class="services container" id="Services">
+  <h1>Our Best <span>Services</span></h1>
 
   <div class="cards">
-    <div class="card" data-aos="fade-up">
-      <img src="img/service1.jpg" loading="lazy">
+
+    <div class="card" data-aos="fade-right">
+      <img src="img/close-up-doctor-checking-cat.jpg">
       <h4>Vet Care</h4>
+      <p>Medical assessments and treatment.</p>
     </div>
 
-    <div class="card" data-aos="fade-up">
-      <img src="img/service2.jpg" loading="lazy">
+    <div class="card" data-aos="fade-up-right">
+      <img src="img/dog-running-through-tire-training-session.jpg">
       <h4>Training</h4>
+      <p>Behavioural training sessions.</p>
     </div>
 
     <div class="card" data-aos="fade-up">
-      <img src="img/service3.jpg" loading="lazy">
+      <img src="img/young-woman-taking-bath-with-her-favorite-dog-world-dog-love-day-concept.jpg">
       <h4>Grooming</h4>
+      <p>Professional grooming services.</p>
     </div>
+
+    <div class="card" data-aos="fade-down">
+      <img src="img/front-view-paper-heart-with-heartbeat-world-heart-day.jpg">
+      <h4>Emergency Care</h4>
+      <p>24/7 emergency response.</p>
+    </div>
+
   </div>
 </section>
 
+<!-- ILLNESS SECTION -->
+<div class="illness">
+
+  <div class="category" data-aos="fade-up-right">
+    <img src="img/5000_9_03.jpg">
+    <h4>Pet Nutrition</h4>
+  </div>
+
+  <div class="category" data-aos="fade-up-right">
+    <img src="img/20944537.jpg">
+    <h4>Hospice Care</h4>
+  </div>
+
+  <div class="category" data-aos="fade-up-right">
+    <img src="img/8941931.jpg">
+    <h4>Reproductive</h4>
+  </div>
+
+  <div class="category" data-aos="fade-up-right">
+    <img src="img/49299.jpg">
+    <h4>Boarding</h4>
+  </div>
+
+  <div class="category" data-aos="fade-up-right">
+    <img src="img/top-view-paper-bone-paw-print-with-stethoscope-animal-day.jpg">
+    <h4>Microchipping</h4>
+  </div>
+
+  <div class="category" data-aos="fade-up-right">
+    <img src="img/99b6f970.jpg">
+    <h4>Vaccinations</h4>
+  </div>
+
+</div>
+
+<!-- DOCTORS -->
+<section id="doctor" class="container">
+
+  <h1>Our Best Doctors</h1>
+
+  <div class="doctors">
+
+    <div class="profile">
+      <img src="img/doctor1.jpg">
+      <h2>Dr. Jerusha</h2>
+      <p>Animal behaviour specialist</p>
+    </div>
+
+    <div class="profile">
+      <img src="img/doctor2.jpg">
+      <h2>Dr. Devon</h2>
+      <p>Skin & allergy expert</p>
+    </div>
+
+    <div class="profile">
+      <img src="img/doctor3.jpg">
+      <h2>Dr. Glen</h2>
+      <p>General veterinary care</p>
+    </div>
+
+    <div class="profile">
+      <img src="img/doctor4.jpg">
+      <h2>Dr. Pauline</h2>
+      <p>Surgical specialist</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="registerCta">
+  <h1>Want to Register Easily?</h1>
+  <button class="btn1">SUBMIT HERE</button>
+</div>
+
+<!-- FOOTER -->
 <footer id="footer">
-  <p>Happy Paws © 2026</p>
+
+  <div class="logoPart">
+    <img src="img/logo.jpg">
+    <h6>Happy Paws Pet Clinic & Shop</h6>
+  </div>
+
+  <div class="servicesDiv">
+    <h1>Services</h1>
+    <p>Delivery</p>
+    <p>Contact</p>
+  </div>
+
+  <div class="features">
+    <h1>Features</h1>
+    <p>Home</p>
+    <p>Doctors</p>
+  </div>
+
+  <div class="user">
+    <h1>Users</h1>
+    <p>Login</p>
+  </div>
+
 </footer>
 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>AOS.init({ once: true });</script>
+<script>AOS.init({ once:true, duration:800 });</script>
 
-<script src="index.js" defer></script>
+<script src="index.js"></script>
 
 </body>
 </html>
+
+  
+   
+
