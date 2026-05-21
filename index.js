@@ -1,68 +1,32 @@
-function playVideo() {
-  var video = document.getElementById("myVideo");
-  if (video.paused) {
-      video.play();
-  } else {
-      video.pause();
-  }
+function playVideo(){
+  const video = document.getElementById("myVideo");
+  video.paused ? video.play() : video.pause();
 }
 
+// FIXED COUNTER (smooth, no lag)
+const counters = document.querySelectorAll(".counter");
 
+counters.forEach(counter => {
+  const target = +counter.dataset.target;
+  let count = 0;
+  const speed = Math.ceil(target / 120);
 
+  function update(){
+    count += speed;
 
-document.addEventListener('DOMContentLoaded', function() {
-  const stats = document.querySelectorAll('.stat-item');
-
-  function countUp(element, endValue, suffix) {
-      let startValue = 0;
-      const duration = 1000; // Duration to count up in milliseconds
-      const pauseDuration = 2000; // Duration to pause after counting up
-      const stepTime = 10; // Time interval between increments
-      const increment = Math.ceil(endValue / (duration / stepTime));
-
-      function updateCounter() {
-          startValue += increment;
-          if (startValue >= endValue) {
-              startValue = endValue; // Cap at end value
-              clearInterval(counterInterval);
-              setTimeout(() => {
-                  startValue = 0; // Reset count
-                  element.textContent = `${startValue}${suffix}`;
-                  counterInterval = setInterval(updateCounter, stepTime);
-              }, pauseDuration);
-          }
-          element.textContent = `${startValue}${suffix}`;
-      }
-
-      let counterInterval = setInterval(updateCounter, stepTime);
+    if(count < target){
+      counter.textContent = count;
+      requestAnimationFrame(update);
+    } else {
+      counter.textContent = target;
+    }
   }
 
-  stats.forEach(stat => {
-      const endValue = parseInt(stat.getAttribute('data-count'));
-      const suffix = stat.getAttribute('data-suffix');
-      countUp(stat.querySelector('h3'), endValue, suffix);
-  });
+  update();
 });
-//   Counter
 
-function animateCounter(element) {
-    const target = +element.getAttribute('data-target');
-    let count = 0;
-    const increment = target / 200; 
-
-    const updateCounter = () => {
-      count += increment;
-      if (count < target) {
-        element.textContent = Math.ceil(count);
-        requestAnimationFrame(updateCounter);
-      } else {
-        element.textContent = target; 
-      }
-    };
-    updateCounter();
-  }
-
-  document.addEventListener('DOMContentLoaded', () => {
-    const counters = document.querySelectorAll('.counter');
-    counters.forEach(counter => animateCounter(counter));
-  });
+// AOS OPTIMIZED
+AOS.init({
+  once:true,
+  duration:800
+});
