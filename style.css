@@ -5,10 +5,11 @@
 }
 
 body{
-  width:80%;
-  margin:auto;
-  font-family:poppins,sans-serif;
+  font-family:Arial, sans-serif;
   background:rgba(173,216,230,0.4);
+  color:#333;
+  width:100%;
+  overflow-x:hidden;
 }
 
 /* HEADER */
@@ -16,10 +17,26 @@ header{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:10px;
+  padding:15px 30px;
+  background:white;
 }
 
-.logo{width:80px}
+.logo-container{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.logo{
+  width:60px;
+  height:60px;
+  object-fit:cover;
+}
+
+.brand-name{
+  font-size:24px;
+  font-weight:bold;
+}
 
 .nav-links{
   display:flex;
@@ -30,120 +47,268 @@ header{
 .nav-links a{
   text-decoration:none;
   color:#333;
+  font-weight:600;
+}
+
+.auth-buttons{
+  display:flex;
+  gap:10px;
 }
 
 .auth-buttons a{
-  padding:8px 12px;
   text-decoration:none;
+  padding:10px 15px;
+  border-radius:5px;
+}
+
+.login-btn{
+  border:1px solid #333;
+  color:#333;
 }
 
 .signup-btn{
-  background:orange;
+  background:orangered;
   color:white;
 }
 
 /* HERO */
 .health-section{
   display:flex;
-  gap:20px;
-  margin-top:20px;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:space-between;
+  padding:40px 30px;
+  gap:30px;
 }
 
-.content,.video-container{
+.content{
   flex:1;
+  min-width:300px;
+}
+
+.content h1{
+  font-size:42px;
+  margin-bottom:10px;
+  color:orangered;
+}
+
+.content h2{
+  font-size:32px;
+  margin-bottom:20px;
+}
+
+.content p{
+  line-height:1.7;
+  margin-bottom:20px;
+}
+
+.content input{
+  width:100%;
+  max-width:400px;
+  padding:12px;
+  margin-bottom:15px;
+}
+
+button{
+  padding:12px 20px;
+  border:none;
+  cursor:pointer;
+  border-radius:5px;
+  margin-right:10px;
+}
+
+.sign-up{
+  background:black;
+  color:white;
+}
+
+.play-video{
+  background:orangered;
+  color:white;
+}
+
+.video-container{
+  flex:1;
+  min-width:300px;
 }
 
 .video-container video{
   width:100%;
+  border-radius:10px;
 }
 
 /* STATS */
 .banner{
-  display:flex;
-  justify-content:space-between;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:20px;
   background:white;
-  padding:20px;
+  margin:30px;
+  padding:30px;
+  border-radius:10px;
 }
 
 .column{
   text-align:center;
-  flex:1;
 }
 
 .column h3{
-  color:orange;
-  font-size:30px;
+  color:orangered;
+  font-size:32px;
 }
 
 /* SERVICES */
+.services{
+  padding:40px 30px;
+}
+
+.services h1{
+  text-align:center;
+  margin-bottom:30px;
+}
+
 .cards{
-  display:flex;
-  gap:15px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
 }
 
 .card{
-  background:#d6e9ff;
-  padding:15px;
+  background:white;
+  padding:20px;
   border-radius:10px;
+  text-align:center;
   transition:0.3s;
 }
 
 .card:hover{
-  transform:scale(1.05);
-  background:#3063c5;
-  color:white;
+  transform:translateY(-5px);
 }
 
-/* PROFILE FIXED */
-.profile{
-  background:#d6e9ff;
-  padding:15px;
+.card img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+  border-radius:10px;
+  margin-bottom:15px;
+}
+
+/* CATEGORY */
+.illness{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:20px;
+  padding:40px 30px;
+}
+
+.category{
+  background:white;
+  padding:20px;
+  border-radius:10px;
   text-align:center;
+}
+
+.category img{
+  width:100%;
+  height:120px;
+  object-fit:cover;
   border-radius:10px;
 }
 
-.profile:hover{
-  transform:scale(1.05);
-  background:#3063c5;
-  color:white;
+/* DOCTORS */
+#doctors,
+#doctors h1,
+#doctor h1{
+  text-align:center;
+}
+
+.doctors{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+  padding:30px;
+}
+
+.profile{
+  background:white;
+  padding:20px;
+  border-radius:10px;
+  text-align:center;
+}
+
+.profile img{
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  object-fit:cover;
+  margin-bottom:15px;
 }
 
 /* CTA */
 .registerCta{
   display:flex;
   justify-content:space-between;
-  padding:30px;
-  background:#eee;
-  margin-top:40px;
+  align-items:center;
+  padding:40px 30px;
+  background:white;
+  margin:30px;
+  border-radius:10px;
 }
 
 .btn1{
-  background:orange;
+  background:orangered;
   color:white;
-  padding:10px 20px;
-  border:none;
 }
 
 /* FOOTER */
 footer{
   display:grid;
-  grid-template-columns:repeat(4,1fr);
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
   gap:20px;
-  padding:20px;
-  margin-top:40px;
-  background:#eee;
+  background:#222;
+  color:white;
+  padding:40px 30px;
 }
 
-/* RESPONSIVE */
-@media(max-width:768px){
-  body{width:95%}
+footer h1{
+  margin-bottom:15px;
+}
 
-  .health-section,
-  .banner,
-  .cards,
-  footer{
+footer p{
+  margin-bottom:10px;
+}
+
+.socials{
+  display:flex;
+  gap:15px;
+  margin-top:15px;
+}
+
+.socials i{
+  font-size:20px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+  header{
     flex-direction:column;
-    grid-template-columns:1fr;
+    gap:20px;
+  }
+
+  .nav-links{
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  .banner{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .registerCta{
+    flex-direction:column;
+    gap:20px;
+    text-align:center;
   }
 }
 
