@@ -3,19 +3,22 @@
    ============================================= */
 
 /* ---- 1. VIDEO PLAY / PAUSE ---- */
-function playVideo() {
+window.playVideo = function () {
   const video = document.getElementById('myVideo');
   const btn   = document.querySelector('.play-video');
   if (!video) return;
 
-  if (video.paused) {
-    video.play();
-    btn.textContent = 'Pause Video';
+  if (video.paused || video.ended) {
+    video.play().then(() => {
+      if (btn) btn.textContent = 'Pause Video';
+    }).catch(err => {
+      console.warn('Video play failed:', err);
+    });
   } else {
     video.pause();
-    btn.textContent = 'Play Video';
+    if (btn) btn.textContent = 'Play Video';
   }
-}
+};
 
 
 /* ---- 2. ANIMATED COUNTERS ---- */
